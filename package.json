@@ -11,6 +11,9 @@
     "sync": "browser-sync start -s 'dist' -f 'dist' --no-notify --no-inject-changes",
     "build": "ts-node app/builder.ts --project configs/tsconfig.json"
   },
+  "bin": {
+    "wm": "app/builder.ts"
+  },
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
   "keywords": [],
   "author": "",
