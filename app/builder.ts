@@ -1,5 +1,3 @@
-#!/usr/bin/env ts-node
-
 import eslint from './classes/Eslint';
 
 (async function(){
