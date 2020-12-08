@@ -1,5 +1,5 @@
 {
-  "name": "builder",
+  "name": "@wm/builder",
   "version": "1.0.0",
   "description": "",
   "main": "dist/builder.js",
@@ -8,14 +8,16 @@
     "check": "eslint src/ts/index.ts",
     "sass": "sass src/sass/index.scss:dist/css/style.css",
     "postcss": "postcss dist/css/style.css > dist/css/style.min.css --verbose",
-    "build": "webpack --mode=production",
-    "sync": "browser-sync start -s 'dist' -f 'dist' --no-notify --no-inject-changes"
+    "sync": "browser-sync start -s 'dist' -f 'dist' --no-notify --no-inject-changes",
+    "build": "ts-node app/builder.ts --project configs/tsconfig.json"
   },
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+  },
+  "dependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
     "@typescript-eslint/eslint-plugin": "^4.9.0",
@@ -33,7 +35,9 @@
     "browser-sync": "^2.26.13",
     "browserify": "^17.0.0",
     "tsify": "^5.0.2",
-    "uglify-js": "^3.12.1"
-  },
-  "dependencies": {}
+    "uglify-js": "^3.12.1",
+    "@types/browserify": "^12.0.36",
+    "@types/eslint": "^7.2.6",
+    "@types/node": "^14.14.10"
+  }
 }

@@ -7,5 +7,6 @@
 		"strictNullChecks": true,
 		"strictFunctionTypes": true,
 		"noImplicitReturns": true
-  }
+	},
+	"include": ["app/builder.ts"]
 }
