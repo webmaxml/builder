@@ -1,7 +1,8 @@
-const browserify = require('browserify');
-const tsify = require('tsify');
-const pathHandler = require('./PathHandler');
+import * as browserify from 'browserify';
+import * as tsify from 'tsify';
+import pathHandler from './PathHandler';
 
+ 
 browserify()
     .add('main.ts')
     .plugin(tsify, { noImplicitAny: true })
