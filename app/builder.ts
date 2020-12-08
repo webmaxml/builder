@@ -3,7 +3,7 @@
 import eslint from './classes/Eslint';
 
 (async function(){
-  const result: string = await eslint.process('src/ts/index/ts');
+  const result: string = await eslint.process('src/ts/index.ts');
   console.log(result);
 })().catch((error: string) => {
   process.exitCode = 1;
